@@ -231,6 +231,14 @@ h1 {
   }
 }
 
+.keyboard-row {
+  width: 200%;
+  margin-left: -50%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
 .guess-key {
   padding: 4px;
   margin: 3px;
@@ -240,6 +248,10 @@ h1 {
   border-radius: 4px;
   width: 2.0em;
   text-align: center;
+}
+
+.guess-key:hover {
+  border: 2px solid black;
 }
 
 .letter-correct {
@@ -255,8 +267,4 @@ h1 {
 .letter-misplaced {
   background-color: var(--color-warning);
   color: white;
-}
-
-.guess-key:hover {
-  border: 2px solid black;
 }

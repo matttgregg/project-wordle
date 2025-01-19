@@ -10,7 +10,7 @@ function Keyboard({addKey, keyState}) {
   console.log(Object.entries(keyState));
   return <div>
     {rows.map((row, i) =>
-    <div key={i}>
+    <div className="keyboard-row" key={i}>
       {row.map((letter, i) => {
         let className = 'guess-key';
         if (keyState[letter]) {

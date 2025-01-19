@@ -19,7 +19,7 @@ function GuessInput({addGuess, gameState, keyState}) {
         setGuess('')
     }}>
         <label htmlFor="guess-input">Enter guess:</label>
-        <input id="guess-input" disabled={gameState !== 'playing'} type="text" required value={guess} onChange={event => setGuess(event.target.value.toUpperCase())} pattern="[A-Za-z]{5,5}"/>
+        <input id="guess-input" disabled={gameState !== 'playing'} type="text" required value={guess} onChange={event => setGuess(event.target.value.toUpperCase())} title="5 letter word" pattern="[a-zA-Z]{5}"/>
     </form>
         <Keyboard addKey={addKey} keyState={keyState} />
         </>
