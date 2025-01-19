@@ -230,3 +230,27 @@ h1 {
     transform: translateY(0%);
   }
 }
+
+.guess-key {
+  padding: 8px;
+  margin: 4px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.letter-correct {
+  background-color: var(--color-success);
+}
+
+.letter-incorrect {
+  background-color: grey;
+}
+
+.letter-misplaced {
+  background-color: var(--color-warning);
+}
+
+.guess-key:hover {
+  border: 2px solid black;
+  margin: 3px;
+}
