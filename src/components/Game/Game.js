@@ -19,7 +19,14 @@ function isCorrect(guess, answer) {
 
 function Game() {
   const [guesses, setGuesses] = React.useState([]);
-  const [gameState, setGameState] = React.useState('playing')
+  const [gameState, setGameState] = React.useState('playing');
+  const [answer, setAnswer] = React.useState(() => sample(WORDS));
+
+  function newGame() {
+    setGuesses([]);
+    setGameState('playing');
+    setAnswer(sample(WORDS));
+  }
 
   function addGuess(text) {
     if (guesses.length >= NUM_OF_GUESSES_ALLOWED) {
@@ -37,7 +44,7 @@ function Game() {
     }
   }
   return <>
-    <GameBanner gameState={gameState} answer={answer} guessCount={guesses.length} />
+    <GameBanner gameState={gameState} answer={answer} guessCount={guesses.length} newGame={newGame} />
     <PreviousGuesses guesses={guesses} answer={answer} />
     <GuessInput addGuess={addGuess} gameState={gameState} />
   </>;
